@@ -1,5 +1,4 @@
 import React, {useState} from "react"
-import config from './apiKeys.js'
 import DayCard from "./dayCard"
 import DegreeToggle from "./degreeToggle"
 
@@ -13,7 +12,7 @@ function SearchWeather(){
     const searchWeather = async (e) => {
         e.preventDefault()
 
-        const url = `http://api.openweathermap.org/data/2.5/forecast?units=metric&q=${query}&appid=${config.owmApiKey}`
+        const url = `http://api.openweathermap.org/data/2.5/forecast?units=metric&q=${query}&appid=${process.env.REACT_APP_owmApiKey}`
         
         try {
             const response = await fetch(url)
