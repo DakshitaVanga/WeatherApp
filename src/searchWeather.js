@@ -12,7 +12,7 @@ function SearchWeather(){
     const searchWeather = async (e) => {
         e.preventDefault()
 
-        const url = `http://api.openweathermap.org/data/2.5/forecast?units=metric&q=${query}&appid=${process.env.REACT_APP_owmApiKey}`
+        const url = `https://api.openweathermap.org/data/2.5/forecast?units=metric&q=${query}&appid=${process.env.REACT_APP_owmApiKey}`
         
         try {
             const response = await fetch(url)
